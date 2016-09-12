@@ -17,10 +17,10 @@ var argv = require('minimist')(process.argv.slice(1), { 'string': ['a', 'i'] })
 var basex = require('base-x')
 
 var alphabet
-if (argv.a) {
-  alphabet = ALPHABETS[argv.a]
-} else if (argv.i) {
-  alphabet = argv.i
+if (argv.a || argv.alphabet) {
+  alphabet = ALPHABETS[argv.a || argv.alphabet]
+} else if (argv.i || argv.inline) {
+  alphabet = argv.i || argv.inline
 }
 
 if (!alphabet) throw TypeError('Unknown or missing alphabet')

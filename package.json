@@ -1,0 +1,47 @@
+{
+  "name": "base-x-bin",
+  "version": "1.0.0",
+  "description": "Command line utility for fast base encoding / decoding of any given alphabet",
+  "keywords": [
+    "utility",
+    "cli",
+    "command",
+    "line",
+    "console",
+    "binary",
+    "base-x",
+    "base58",
+    "base62",
+    "base64",
+    "crypto",
+    "crytography",
+    "decode",
+    "decoding",
+    "encode",
+    "encoding"
+  ],
+  "homepage": "https://github.com/dcousens/base-x-bin",
+  "bugs": {
+    "url": "https://github.com/dcousens/base-x-bin/issues"
+  },
+  "license": "MIT",
+  "author": "Daniel Cousens",
+  "bin": {
+    "basex": "./index.js"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcousens/base-x.git"
+  },
+  "scripts": {
+    "standard": "standard"
+  },
+  "dependencies": {
+    "base-x": "^1.0.4",
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {
+    "standard": "^8.0.0"
+  }
+}

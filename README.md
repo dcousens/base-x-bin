@@ -8,22 +8,32 @@ Command line utility for fast base encoding / decoding of any given alphabet usi
 
 ## Examples
 
+* `-a` to use a built-in alphabet (see Alphabets)
+* `-d`|`--decode` to decode
+* `-i`|`--inline` for an inline alphabet argument
+
 Base58
-
 ``` bash
+echo "test" | basex -a 58
+// E8f4pE5
+
+echo -n "E8f4pE5" | basex -d -a 58
+// test
+
 cat /dev/urandom | head -c 32 | basex -a 58
+// 5F8C26whY3W4kXToXVziUE6WACBwjx3bNRuG1ekQ9M8d
 ```
 
-Base62
-
+Custom
 ``` bash
-cat /dev/urandom | head -c 32 | basex -a 62
-```
+echo "Z" | basex -d -i "012"
+// 10110
 
-Base62
+echo -n "10100" | basex -d -i "012"
+// "Z"
 
-``` bash
-cat /dev/urandom | head -c 32 | basex -a
+cat /dev/urandom | head -c 32 | basex -i "012"
+// 12121200000212100001002211221001110102210001110221022102001100020201012022102112001010101210020001011021020020021102211121221000010110222201211201001011200002022
 ```
 
 
